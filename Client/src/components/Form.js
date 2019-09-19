@@ -22,7 +22,7 @@ const UserForm = ({values, errors, touched, status}) => {
                     {touched.email && errors.email &&(
                         <p className="error">{errors.email}</p>
                     )}
-                 <Field type="text" name="password" placeholder="Password"/>
+                 <Field type="password" name="password" placeholder="Password"/>
                     {touched.password && errors.password &&(
                         <p className="error">{errors.password}</p>
                     )}
@@ -34,10 +34,10 @@ const UserForm = ({values, errors, touched, status}) => {
                         checked={values.TOS}
                         />
                 </label>
-                    <button>Submit</button>
+                        <button >Submit</button>
             </Form>
             {users.map(user =>(
-                <ul key={user.ud}>
+                <ul key={user.id}>
                     <li>Name:{user.name}</li>
                     <li>Email:{user.email}</li>
                     <li>Password:{user.password}</li>
